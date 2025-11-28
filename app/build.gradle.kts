@@ -1,18 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
 }
-android {
-    defaultConfig {
-        vectorDrawables.useSupportLibrary = true
-    }
-}
-
 
 android {
     namespace = "com.example.quanlytourdulichnoidia"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.quanlytourdulichnoidia"
@@ -40,6 +32,7 @@ android {
 }
 
 dependencies {
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
