@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F5F7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- HEADER -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chăm sóc Khách hàng"
+                android:textSize="24sp"
+                android:textColor="#111827"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quản lý và hỗ trợ khách hàng hiệu quả."
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="4dp"/>
+
+            <!-- CUSTOMER SENTIMENT CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="24dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/ivSentiment"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_sentiment_satisfied"
+                        android:layout_centerVertical="true"
+                        app:tint="#2563EB" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@id/ivSentiment"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phân tích Cảm xúc KH"
+                            android:textSize="18sp"
+                            android:textColor="#111827"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Xem báo cáo &amp; thấu hiểu khách hàng"
+                            android:textColor="#6B7280"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- TABS -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:tabIndicatorColor="#2563EB"
+                app:tabSelectedTextColor="#2563EB"
+                app:tabTextColor="#6B7280">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theo dõi Hỗ trợ" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phản hồi &amp; Khiếu nại" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <!-- ACTION BUTTONS -->
+            <Button
+                android:id="@+id/btnOpenSupportTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mở Phiếu hỗ trợ"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#2563EB"
+                app:icon="@drawable/ic_add_circle"
+                android:padding="12dp"
+                app:cornerRadius="8dp"/>
+
+            <Button
+                android:id="@+id/btnSendWarning"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gửi Cảnh báo"
+                android:layout_marginTop="8dp"
+                app:icon="@drawable/ic_warning"
+                android:textColor="#111827"
+                app:strokeColor="#E5E7EB"
+                app:iconTint="#F59E0B"
+                android:padding="12dp"
+                app:cornerRadius="8dp"/>
+
+            <!-- SUPPORT TICKET LIST -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh sách phiếu hỗ trợ"
+                android:textSize="20sp"
+                android:textColor="#111827"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <!-- TICKET ITEM 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTicket1Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#1205 - Vấn đề thanh toán"
+                        android:textColor="#111827"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đã giải quyết"
+                        android:background="@drawable/bg_status_solved"
+                        android:textColor="@android:color/white"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="12sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@id/tvTicket1Title"/>
+
+                    <TextView
+                        android:id="@+id/tvTicket1Info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KH: Trương Văn Long - Tour Đà Lạt"
+                        android:layout_below="@id/tvTicket1Title"
+                        android:textColor="#6B7280"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cập nhật 2 giờ trước"
+                        android:layout_below="@id/tvTicket1Info"
+                        android:drawableStart="@drawable/ic_history"
+                        android:drawablePadding="4dp"
+                        android:textColor="#6B7280"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- TICKET ITEM 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTicket2Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#1204 - Thay đổi lịch trình"
+                        android:textColor="#111827"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đang xử lý"
+                        android:background="@drawable/bg_status_pending"
+                        android:textColor="#111827"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="12sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@id/tvTicket2Title"/>
+
+                    <TextView
+                        android:id="@+id/tvTicket2Info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KH: Vũ Hồng Quang - Tour Phú Quốc"
+                        android:layout_below="@id/tvTicket2Title"
+                        android:textColor="#6B7280"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cập nhật 1 ngày trước"
+                        android:layout_below="@id/tvTicket2Info"
+                        android:drawableStart="@drawable/ic_history"
+                        android:drawablePadding="4dp"
+                        android:textColor="#6B7280"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Thống kê"
+            android:textColor="#6B7280"
+            android:drawableTop="@drawable/ic_thong_ke"
+            android:drawableTint="#6B7280"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kinh doanh"
+            android:textColor="#6B7280"
+            android:drawableTop="@drawable/ic_kinh_doanh"
+            android:drawableTint="#6B7280"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CSKH"
+            android:textColor="#2563EB"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_cskh_active"
+            android:drawableTint="#2563EB"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cá nhân"
+            android:textColor="#6B7280"
+            android:drawableTop="@drawable/ic_ca_nhan"
+            android:drawableTint="#6B7280"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
