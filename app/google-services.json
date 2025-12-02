@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "413857592934",
+    "project_id": "quanlytourdulichnoidia",
+    "storage_bucket": "quanlytourdulichnoidia.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413857592934:android:2cd57aa779165c76521fa7",
+        "android_client_info": {
+          "package_name": "com.example.quanlytourdulichnoidia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQURBqoLnoquzCy0y7_6ne8uMDy_0Tolk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
