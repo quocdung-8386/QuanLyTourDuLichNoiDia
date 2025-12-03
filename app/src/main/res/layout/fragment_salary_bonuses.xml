@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".SalaryBonusesFragment">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lương &amp; Thưởng/Phạt"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/search_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <ImageView
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        android:background="#F5F5F5"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/department_filter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_spinner"
+                android:drawableStart="@drawable/ic_filter_alt"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="Tất cả phòng ban"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/export_button"
+                app:layout_constraintEnd_toStartOf="@+id/export_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/export_button" />
+
+            <Button
+                android:id="@+id/export_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_export"
+                android:drawableStart="@drawable/ic_file_download"
+                android:drawablePadding="8dp"
+                android:drawableTint="#2196F3"
+                android:padding="12dp"
+                android:text="Xuất Báo cáo"
+                android:textColor="#2196F3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- Bonus Item -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bonus_item_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/department_filter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/bonus_title_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Thưởng - Nông Quốc Dũng"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/bonus_status_1"/>
+
+                    <TextView
+                        android:id="@+id/bonus_status_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chờ phê duyệt"
+                        android:textColor="#FFC107"
+                        android:background="@drawable/bg_status_pending_yellow"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/bonus_description_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Thưởng nóng hoàn thành xuất sắc KPI tháng 11/2025. Đề xuất bởi: Nqdung"
+                        android:textColor="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/bonus_title_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <Button
+                        android:id="@+id/report_button_1"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Báo cáo Công"
+                        android:drawableStart="@drawable/ic_file_download"
+                        android:drawablePadding="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/bonus_description_1"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <Button
+                        android:id="@+id/reject_button_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Từ chối"
+                        android:background="@drawable/bg_button_reject_red"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/report_button_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/report_button_1"
+                        app:layout_constraintStart_toEndOf="@+id/report_button_1"/>
+
+                    <Button
+                        android:id="@+id/approve_button_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phê duyệt"
+                        android:background="@drawable/bg_button_approve_green"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/reject_button_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/reject_button_1"
+                        app:layout_constraintStart_toEndOf="@+id/reject_button_1"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Penalty Item -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/penalty_item_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/bonus_item_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/penalty_title_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phạt - Trương Long"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/penalty_status_1"/>
+
+                    <TextView
+                        android:id="@+id/penalty_status_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chờ phê duyệt"
+                        android:textColor="#FFC107"
+                        android:background="@drawable/bg_status_pending_yellow"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/penalty_description_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Phạt do đi trễ 3 lần trong tháng 11/2025. Đề xuất bởi: Hệ thống"
+                        android:textColor="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/penalty_title_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <Button
+                        android:id="@+id/penalty_report_button_1"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Báo cáo Công"
+                        android:drawableStart="@drawable/ic_file_download"
+                        android:drawablePadding="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/penalty_description_1"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <Button
+                        android:id="@+id/penalty_reject_button_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Từ chối"
+                        android:background="@drawable/bg_button_reject_red"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/penalty_report_button_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/penalty_report_button_1"
+                        app:layout_constraintStart_toEndOf="@+id/penalty_report_button_1"/>
+
+                    <Button
+                        android:id="@+id/penalty_approve_button_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phê duyệt"
+                        android:background="@drawable/bg_button_approve_green"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/penalty_reject_button_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/penalty_reject_button_1"
+                        app:layout_constraintStart_toEndOf="@+id/penalty_reject_button_1"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Approved Bonus Item -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/approved_bonus_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/penalty_item_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/approved_bonus_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Thưởng - Vũ Quang"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/approved_bonus_status"/>
+
+                    <TextView
+                        android:id="@+id/approved_bonus_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đã phê duyệt"
+                        android:textColor="#4CAF50"
+                        android:background="@drawable/bg_status_refunded_green"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/approved_bonus_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Thưởng nhân viên xuất sắc quý 4/2025. Đề xuất bởi: Ban Giám đốc"
+                        android:textColor="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/approved_bonus_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <Button
+                        android:id="@+id/approved_bonus_report_button"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Báo cáo Công"
+                        android:drawableStart="@drawable/ic_file_download"
+                        android:drawablePadding="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/approved_bonus_description"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Rejected Penalty Item -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rejected_penalty_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/approved_bonus_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/rejected_penalty_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phạt - Long Nông"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/rejected_penalty_status"/>
+
+                    <TextView
+                        android:id="@+id/rejected_penalty_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đã từ chối"
+                        android:textColor="#F44336"
+                        android:background="@drawable/bg_status_rejected_red"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/rejected_penalty_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Phạt do làm mất tài sản công ty. Lý do từ chối: Chưa đủ bằng chứng."
+                        android:textColor="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/rejected_penalty_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <Button
+                        android:id="@+id/rejected_penalty_report_button"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Báo cáo Công"
+                        android:drawableStart="@drawable/ic_file_download"
+                        android:drawablePadding="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/rejected_penalty_description"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:itemBackground="@drawable/bg_bottom_nav_item"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu"
+        app:selectedItemId="@id/navigation_business"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/design_tour"
+                android:text="Thiết kế tour"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/company_name"
+                android:text="DiCungToiTravel"
                 android:textColor="@color/text_gray"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -53,11 +53,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:gravity="center"
-            android:text="@string/save"
+            android:text="Lưu"
             android:textColor="@color/primary_blue"
             android:textSize="15sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
 
     <!-- BODY -->
     <ScrollView
@@ -75,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tour_name_required"
+                android:text="Tên tour (*)"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -87,7 +92,7 @@
                 android:layout_marginTop="6dp"
                 android:autofillHints="name"
                 android:background="@drawable/bg_edit"
-                android:hint="@string/tour_name_hint"
+                android:hint="Ví dụ: Tour Sài Gòn - Vũng Tàu"
                 android:inputType="text"
                 android:padding="12dp"
                 android:textSize="13sp" />
@@ -97,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/tour_code_required"
+                android:text="Mã tour (*)"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -109,7 +114,7 @@
                 android:layout_marginTop="6dp"
                 android:autofillHints="name"
                 android:background="@drawable/bg_edit"
-                android:hint="@string/tour_code_hint"
+                android:hint="Ví dụ: SG-VT-2N1D-01"
                 android:inputType="text"
                 android:padding="12dp"
                 android:textSize="13sp" />
@@ -135,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="@string/timeline"
+                    android:text="Lịch trình"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -143,7 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="@string/add"
+                    android:text="Thêm"
                     android:textColor="@color/primary_blue"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -169,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="@string/included"
+                    android:text="Bao gồm"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -177,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="@string/add"
+                    android:text="Thêm"
                     android:textColor="@color/primary_blue"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -203,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="@string/not_included"
+                    android:text="Không bao gồm"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -211,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="@string/add"
+                    android:text="Thêm"
                     android:textColor="@color/primary_blue"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -237,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="@string/policy"
+                    android:text="Chính sách"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -245,7 +250,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="@string/add"
+                    android:text="Thêm"
                     android:textColor="@color/primary_blue"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -269,7 +274,7 @@
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_thong_ke"
             android:gravity="center"
-            android:text="@string/statistics"
+            android:text="Thống kê"
             android:textColor="@color/text_gray"
             android:textSize="12sp" />
 
@@ -280,7 +285,7 @@
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_kinh_doanh_active"
             android:gravity="center"
-            android:text="@string/business"
+            android:text="Kinh doanh"
             android:textColor="@color/primary_blue"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -289,10 +294,10 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android.layout_weight="1"
+            android:layout_weight="1"
             android:drawableTop="@drawable/ic_cskh"
             android:gravity="center"
-            android:text="@string/customer_service"
+            android:text="CSKH"
             android:textColor="@color/text_gray"
             android:textSize="12sp" />
 
@@ -303,7 +308,7 @@
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_ca_nhan"
             android:gravity="center"
-            android:text="@string/personal"
+            android:text="Cá nhân"
             android:textColor="@color/text_gray"
             android:textSize="12sp" />
 
